@@ -12,10 +12,11 @@
     <h2>Login</h2
     
       <!-- change port numeber to 8092 on accenture laptop and 8080 on personal laptop -->
-    <form autocomplete="off" action="http://localhost:8092/api/v1/user" method="POST">
+
+    <form autocomplete="off" action="" method="POST">
       <input type="hidden" id="action" value="login">
-      <label for="">Username</label>
-      <input type="text" id="username" value=""> <br>
+      <label for="">Email</label><br>
+      <input type="email" id="email" value=""><br>
       <label for="">Password</label>
       <input type="password" id="password" value=""> <br>
       <button type="button" class= "button"id="login-btn">Login</button> <!-- onclick="submitData(); -->
@@ -23,11 +24,12 @@
     
    
     <br>
+    <div class="errorM" id="messageM"></div>
     <br>
     <a href="register.html">Go To Register</a>
 
   </div>
 
-  <script type= "text/javascript" src="../js/forms.js"></script> 
+  <script type= "text/javascript" src="../js/loginform.js"></script> 
   </body>
 </html>

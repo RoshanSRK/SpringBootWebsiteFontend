@@ -1,5 +1,5 @@
-const loginBtn = document.querySelector('#login-btn');
 const registerBtn = document.querySelector('#register-btn');
+
 
 
 const registerUser =  async() => {
@@ -26,10 +26,13 @@ const registerUser =  async() => {
           })
     })
 
-    let errorMessage = document.querySelector("#errorMsg")
-    if (response2.status != 200){
-        // errorMessage.innerHTML = "Email is already taken, please enter another email or login.";
-        errorMessage.innerHTML = response2.statusText;
+    if (response2.status == 200){
+        window.location.replace("http://localhost:8090/SpringBootWebsiteFontend/springboot_website/login/html_files/index2.html");
+    }
+    else{
+        let result = await response2.json();
+        let message = document.querySelector('#errorMsg');
+        message.innerHTML =result.message;
     }
 
 
@@ -40,5 +43,5 @@ const registerUser =  async() => {
 }
 
 
-// loginBtn.addEventListener('click', validateUser);
+
 registerBtn.addEventListener('click', registerUser);

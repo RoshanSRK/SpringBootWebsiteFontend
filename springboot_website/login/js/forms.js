@@ -11,7 +11,7 @@ const registerUser =  async() => {
 
     // let response = await fetch('http://localhost:8080/api/v1/user/all');
 
-    let response2 = await fetch('http://localhost:8080/api/v1/user/save',
+    let response2 = await fetch('http://localhost:8092/api/v1/user/save',
     {
         method: 'POST',
         headers: {
@@ -28,18 +28,17 @@ const registerUser =  async() => {
 
     let errorMessage = document.querySelector("#errorMsg")
     if (response2.status != 200){
+        // errorMessage.innerHTML = "Email is already taken, please enter another email or login.";
         errorMessage.innerHTML = response2.statusText;
     }
 
 
 
     // console.log(response);
-    // console.log(response2);
+    console.log(response2);
 
 }
 
 
 // loginBtn.addEventListener('click', validateUser);
 registerBtn.addEventListener('click', registerUser);
-git config --global user.email "roshan.sunt.r.kokil@accenture.com"
-  git config --global user.name "RoshanAcc"

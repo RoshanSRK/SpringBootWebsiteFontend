@@ -24,8 +24,15 @@ const registerUser =  async() => {
             "password": password,
             "dob": dob
           })
-
     })
+
+    let errorMessage = document.querySelector("#errorMsg")
+    if (response2.status != 200){
+        errorMessage.innerHTML = response2.statusText;
+    }
+
+
+
     // console.log(response);
     // console.log(response2);
 
@@ -34,3 +41,5 @@ const registerUser =  async() => {
 
 // loginBtn.addEventListener('click', validateUser);
 registerBtn.addEventListener('click', registerUser);
+git config --global user.email "roshan.sunt.r.kokil@accenture.com"
+  git config --global user.name "RoshanAcc"

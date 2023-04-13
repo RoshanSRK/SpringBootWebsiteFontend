@@ -27,7 +27,7 @@ const registerUser =  async() => {
     })
 
     if (response2.status == 200){
-        window.location.replace("http://localhost:8090/SpringBootWebsiteFontend/springboot_website/login/html_files/index2.html");
+        window.location.replace("index2.html");
     }
     else{
         let result = await response2.json();

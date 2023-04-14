@@ -1,0 +1,99 @@
+<section class="products wearables" id = "wearables">
+    <h1 class="heading">Wear<span>Ables</span> </h1>
+     <div class="cover">
+      <button class="left_button" ><i class="fa fa-chevron-left"></i></button> 
+     <div class="box-container" id="box-containerW">
+        <!-- <?php
+        $stmt=$conn->prepare("SELECT * FROM product WHERE productCategory LIKE 'E%' OR productCategory LIKE 'H%' ORDER BY RAND()");
+        $stmt-> execute();
+        $result= $stmt->get_result();
+        while($row=$result->fetch_assoc()):
+        ?> -->
+       <div class="box">
+            <div class="image">
+                  <img class="product-image" src="" alt=""><!-- <?= $row['productImage1'] ?> -->
+                <div class="icons">
+                    <button class="heart-btn fas fa-heart" ></button>
+                    <button class="cart-btn"> Add to cart </button>
+                    <a href="specificProduct.php?productId=<?= $row['productId']?>"  class="fas fa-angle-double-right"></a>
+                    <!-- loadproductpage.php in href -->
+                </div>
+            </div>
+            <div class="content">
+                 <h3></h3><!--<?= $row['productName'] ?> -->
+                <span class="price"> Rs </span><!-- <?= $row['productPrice'] ?> -->
+            </div>
+        </div>
+        <!-- <?php endwhile; ?> -->
+    </div>
+    <button class="right_button" ><i class="fa fa-chevron-right"></i></button>
+    </div>
+</section>
+
+<section class="products chargers" id = "chargers">
+
+    <h1 class="heading">Chargers <span></span> </h1>
+      <div class="cover">
+      <button class="left_button"><i class="fa fa-chevron-left"></i></button> 
+         <div class="box-container" id="box-containerC">
+ <!-- <?php
+        $stmt=$conn->prepare("SELECT * FROM product WHERE productCategory LIKE 'C%' ORDER BY RAND()");
+        $stmt-> execute();
+        $result= $stmt->get_result();
+        while($row=$result->fetch_assoc()):
+        ?> -->
+       <div class="box">
+            <div class="image">
+               <img class="product-image" src="<?= $row['productImage1'] ?>" alt=""> <!--  -->
+                <div class="icons">
+                    <button class="heart-btn fas fa-heart" ></button>
+                    <button class="cart-btn"> Add to cart </button>
+                    <a href="specificProduct.php?productId=<?= $row['productId']?>"  class="fas fa-angle-double-right"></a>
+                    <!-- loadproductpage.php in href -->
+                </div>
+            </div>
+            <div class="content">
+                <h3><?= $row['productName'] ?></h3>
+                <!--<div class="price"> Rs2500 </div>-->
+                <span class="price"> Rs <?= $row['productPrice'] ?></span>
+            </div>
+        </div>
+        <?php endwhile; ?>
+        </div>
+      <button class="right_button" ><i class="fa fa-chevron-right"></i></button>
+    </div>
+</section>
+          
+    <section class="products other" id = "other">
+
+    <h1 class="heading"> Other <span>Accessories</span> </h1>
+      <div class="cover">
+      <button class="left_button" ><i class="fa fa-chevron-left"></i></button> 
+          <div class="box-container" id="box-containerO">
+        <?php
+         $stmt=$conn->prepare("SELECT * FROM product WHERE productCategory LIKE 'O%' ORDER BY RAND()");
+         $stmt-> execute();
+         $result= $stmt->get_result();
+         while($row=$result->fetch_assoc()):
+        ?>
+       <div class="box">
+            <div class="image">
+                <img class="product-image" src="<?= $row['productImage1'] ?>" alt="">
+                <div class="icons">
+                    <button class="heart-btn fas fa-heart" ></button>
+                    <button class="cart-btn"> Add to cart </button>
+                    <a href="specificProduct.php?productId=<?= $row['productId']?>"  class="fas fa-angle-double-right"></a>
+                    <!-- loadproductpage.php in href -->
+                </div>
+            </div>
+            <div class="content">
+                <h3><?= $row['productName'] ?></h3>
+                <!--<div class="price"> Rs2500 </div>-->
+                <span class="price"> Rs <?= $row['productPrice'] ?></span>
+            </div>
+        </div>
+        <?php endwhile; ?>
+      </div>
+      <button class="right_button" ><i class="fa fa-chevron-right"></i></button>
+    </div>
+</section>

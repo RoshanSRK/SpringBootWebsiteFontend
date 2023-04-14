@@ -18,7 +18,7 @@ const validateUser = async() =>{
     })
 
     if (response.status == 200){
-        window.location.replace("index2.html");
+        window.location.replace("productspage.html");
     }
     else{
         let result = await response.json();

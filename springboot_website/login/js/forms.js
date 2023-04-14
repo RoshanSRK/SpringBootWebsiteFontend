@@ -27,7 +27,7 @@ const registerUser =  async() => {
     })
 
     if (response2.status == 200){
-        window.location.replace("index2.html");
+        window.location.replace("productspage.html");
     }
     else{
         let result = await response2.json();

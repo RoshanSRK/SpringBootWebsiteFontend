@@ -1,5 +1,5 @@
-const loginBtn = document.querySelector('#login-btn');
 const registerBtn = document.querySelector('#register-btn');
+
 
 
 const registerUser =  async() => {
@@ -11,7 +11,7 @@ const registerUser =  async() => {
 
     // let response = await fetch('http://localhost:8080/api/v1/user/all');
 
-    let response2 = await fetch('http://localhost:8080/api/v1/user/save',
+    let response2 = await fetch('http://localhost:8092/api/v1/user/save',
     {
         method: 'POST',
         headers: {
@@ -24,13 +24,24 @@ const registerUser =  async() => {
             "password": password,
             "dob": dob
           })
-
     })
+
+    if (response2.status == 200){
+        window.location.replace("productspage.html");
+    }
+    else{
+        let result = await response2.json();
+        let message = document.querySelector('#errorMsg');
+        message.innerHTML =result.message;
+    }
+
+
+
     // console.log(response);
-    // console.log(response2);
+    console.log(response2);
 
 }
 
 
-// loginBtn.addEventListener('click', validateUser);
+
 registerBtn.addEventListener('click', registerUser);
